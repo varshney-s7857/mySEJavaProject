@@ -1,0 +1,43 @@
+/*
+SQLyog - Free MySQL GUI v5.14
+Host - 5.0.77-community-nt : Database - cbir
+*********************************************************************
+Server version : 5.0.77-community-nt
+*/
+
+SET NAMES utf8;
+
+SET SQL_MODE='';
+
+create database if not exists `cbir`;
+
+USE `cbir`;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO';
+
+/*Table structure for table `imageinfo` */
+
+DROP TABLE IF EXISTS `imageinfo`;
+
+CREATE TABLE `imageinfo` (
+  `name` char(100) default NULL,
+  `description` char(100) default NULL,
+  `path` char(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `imageinfo` */
+
+/*Table structure for table `user_details` */
+
+DROP TABLE IF EXISTS `user_details`;
+
+CREATE TABLE `user_details` (
+  `userid` char(100) default NULL,
+  `password` char(100) default NULL,
+  `usertype` char(100) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `user_details` */
+
+insert into `user_details` (`userid`,`password`,`usertype`) values ('admin','admin','a'),('amit','amit','m'),('sumit','sumit','m');
+
+SET SQL_MODE=@OLD_SQL_MODE;
